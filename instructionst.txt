@@ -1,0 +1,11 @@
+1- add the docker file
+2- create dockerignore
+3- build it // docker build -t react-docker . //the name of the images
+4- now run it // docker run react-docker
+// but i need to map thro the port 
+docker run -p:5173:5173 react-docker
+//  use --host to expose
+// modify package json
+
+to make docker change auto
+docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker 
